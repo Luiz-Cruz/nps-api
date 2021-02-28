@@ -22,12 +22,11 @@ class UserController{
         const user = usersRepository.create({
             name, 
             email,
-
         })
 
         await usersRepository.save(user);
 
-        return response.json(user);
+        return response.status(201).json(user);
     }
 }
 

@@ -1,2 +1,5 @@
 # Dependency directories
-node_modules/
+node_modules
+.vscode
+src/database/database.sqlite
+src/database/database.test.sqlite
