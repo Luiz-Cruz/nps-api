@@ -49,7 +49,6 @@ export class CreateSurveysUsers1614525434530 implements MigrationInterface {
                         onUpdate: "CASCADE"
                     }
                 ],
-                
             })
         );
     }
