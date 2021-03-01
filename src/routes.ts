@@ -1,14 +1,22 @@
-import { Router } from 'express';
-import { SurveysController } from '../src/controllers/SurveysController';
-import { SendMailController } from './controllers/SendMailController';
-import { UserController } from './controllers/UserController';
+import { Router } from "express";
+import { AnswerController } from "./controllers/AnswerController";
+import { NpsController } from "./controllers/NpsController";
+import { SendMailController } from "./controllers/SendMailController";
+import { SurveysController } from "./controllers/SurveysController";
+import { UserController } from "./controllers/UserController";
 
 const router = Router();
+
 const userController = new UserController();
 const surveysController = new SurveysController();
+
 const sendMailController = new SendMailController();
 
-// Users
+const answerController = new AnswerController();
+
+const npsController = new NpsController();
+
+// User
 router.post("/users", userController.create);
 
 // Surveys
@@ -17,5 +25,11 @@ router.get("/surveys", surveysController.show);
 
 // Sendmail
 router.post("/sendMail", sendMailController.execute);
+
+// Answer
+router.get("/answers/:value", answerController.execute);
+
+// NPS
+router.get("/nps/:survey_id", npsController.execute);
 
 export { router };
