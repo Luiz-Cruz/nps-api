@@ -4,9 +4,6 @@ I put into practice concepts about what is an API, how to start a project using 
 TypeORM for data manipulation, automated tests and email sending.
 
 
-Developing the architecture of an API, and how to start a project using Typescript and Express for route 
-management, TypeORM for data manipulation, automated testing and emailing.
-
 
 # :fire: Technologies
 • [TypeScript](https://www.typescriptlang.org/)
